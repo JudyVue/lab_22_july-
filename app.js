@@ -11,13 +11,11 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a,b){ //eslint-disable-line
   var output = a + b;
   var message = 'The sum of ' + a + ' and ' + b + ' is ' + output + '.';
-  //console.log('The sum of 4 and 7 is 11.');
-  // console.log(message);
   return [output, message];
 }
 //
 // // Here is the test for sum(); uncomment it to run it
-//testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -39,7 +37,7 @@ return [output, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-//testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -62,9 +60,9 @@ var finalSum = sum(firstSum, c)[0];
 var firstProduct = multiply(a,b)[0];
 var finalProduct = multiply(firstProduct, c)[0];
 
-var firstMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + finalSum + '.'
+var firstMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + finalSum + '.';
 // console.log(firstMessage);
-var secondMessage = 'The product of ' + a + ' and ' +  b  + ' and ' + c  + ' is ' + finalProduct +'.'
+var secondMessage = 'The product of ' + a + ' and ' +  b  + ' and ' + c  + ' is ' + finalProduct +'.';
 // console.log(secondMessage);
 
 return[finalSum, firstMessage, secondMessage, finalProduct];
@@ -95,13 +93,8 @@ var secondNumber = testArray[1];
 var thirdNumber = testArray[2];
 var firstArraySum = sum(firstNumber, secondNumber)[0];
 var finalArraySum = sum(firstArraySum, thirdNumber)[0];
-// console.log('testing for prob 4')
-// console.log(firstArraySum);
-// console.log(finalArraySum);
+var message = testArray + ' was passed in as an array of numbers, and ' + finalArraySum + ' is their sum.';
 
-var message = testArray + ' was passed in as an array of numbers, and ' + finalArraySum + ' is their sum.'
-
-//console.log(thisShouldReturn[1]);
 return [0, message];
 
 }
@@ -122,10 +115,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
+  var firstNumber = testArray[0];
+  var secondNumber = testArray[1];
+  var thirdNumber = testArray[2];
+  var firstArrayProduct = multiply(firstNumber, secondNumber)[0];
+  var finalArrayProduct = multiply(firstArrayProduct, thirdNumber)[0];
+  var message = 'The numbers ' + testArray + ' have a product of ' + finalArrayProduct + '.';
+
+  return [0, message];
+
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
