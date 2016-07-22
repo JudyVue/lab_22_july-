@@ -90,12 +90,23 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
+var firstNumber = testArray[0];
+var secondNumber = testArray[1];
+var thirdNumber = testArray[2];
+var firstArraySum = sum(firstNumber, secondNumber)[0];
+var finalArraySum = sum(firstArraySum, thirdNumber)[0];
+// console.log('testing for prob 4')
+// console.log(firstArraySum);
+// console.log(finalArraySum);
+
+var message = testArray + ' was passed in as an array of numbers, and ' + finalArraySum + ' is their sum.'
+
+//console.log(thisShouldReturn[1]);
+return [0, message];
 
 }
-
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
