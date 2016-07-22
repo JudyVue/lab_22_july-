@@ -1,6 +1,8 @@
 'use strict';
 
 function testSum() { //eslint-disable-line
+  console.log('This is first test: ' +sum(4,7)[1]);
+  console.log('This is second test: ' +sum(4,7));
   if (sum(4,7)[1] === 'The sum of 4 and 7 is 11.') {
     console.log('%c TEST FOR sum() PASSES', 'color: green');
   } else {
